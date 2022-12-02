@@ -1,3 +1,25 @@
+* {
+    margin: 0;
+}
+
+ul[role='list'],
+ol[role='list'] {
+  list-style: none;
+}
+
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+
 body {
     font-family: 'Inter', sans-serif;
+    min-width: 768px;
+    min-height: 100vh;
+}
+
+main {
+    display: flex;
 }
