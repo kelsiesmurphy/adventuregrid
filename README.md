@@ -85,7 +85,7 @@ To run this app, you must install:
 
 1. Clone the repository
    ```sh
-   git clone <LINK>
+   git clone https://github.com/kelsiesmurphy/CC_Project_AdventureGrid.git
    ```
 2. Navigate to the folder using terminal
 3. Create the database
@@ -110,4 +110,4 @@ To run this app, you must install:
 
 Kelsie Murphy - [LinkedIn](https://www.linkedin.com/in/kelsiesmurphy/) - [Twitter](https://twitter.com/kelsiesmurphy)
 
-Project Link: [LINK](LINK)
+Project Link: [https://github.com/kelsiesmurphy/CC_Project_AdventureGrid](https://github.com/kelsiesmurphy/CC_Project_AdventureGrid)
