@@ -2,4 +2,7 @@
 
 {% block content %}
     <h2>index page</h2>
+    {% for experience in experiences %}
+        <img src="{{experience.image}}" alt="">
+    {% endfor %}
 {% endblock content %}
