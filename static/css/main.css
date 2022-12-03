@@ -1,4 +1,39 @@
 .main-wrapper {
     margin-left: 220px;
-    padding: 3.75rem 2rem;
+    padding: 3.75rem 4rem;
+    width: 100%;
+}
+
+.user-card {
+    text-align: center;
+    padding: 24px;
+    background-color: #F2F4F7;
+    min-width: 280px;
+    height: 200px;
+    border-radius: 8px;
+}
+
+.user-card>img {
+    aspect-ratio: 1/1;
+    width: 80px;
+    border-radius: 100%;
+    margin-inline: auto;
+    margin-bottom: 20px;
+}
+
+.user-card>h3 {
+    font-weight: 500;
+    font-size: 18px;
+    color: #101828;
+}
+
+.user-card>p {
+    color: #667085;
+    font-size: 14px;
+}
+
+.card-grid {
+    display: grid;
+    gap: 32px;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
 }
