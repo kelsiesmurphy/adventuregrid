@@ -6,7 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dashboard | AdventureGrid</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
     <link rel="stylesheet" href="{{ url_for('static', filename='css/forms.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/sidebar.css') }}">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet">
@@ -14,7 +16,46 @@
 <body>
     <main>
         <div class="sidebar">
-            
+            <header>
+                <img src="/static/images/adventuregrid_logo.svg" width="50" alt="AdventureGrid Logo">
+            </header>
+            <main>
+                <nav class="sidebar-nav">
+                    <ul>
+                        <a href="/">
+                            <li>
+                                <img src="/static/images/icons/home.svg" width="24" alt="Home icon"><span>Home</span>
+                            </li>
+                        </a>
+                        <a href="/users">
+                            <li>
+                                <img src="/static/images/icons/users.svg" width="24" alt="Users icon"><span>Users</span>
+                            </li>
+                        </a>
+                        <a href="/experiences">
+                            <li>
+                                <img src="/static/images/icons/experiences.svg" width="24" alt="Experiences icon"><span>Experiences</span>
+                            </li>
+                        </a>
+                        <a href="/reviews">
+                            <li>
+                                <img src="/static/images/icons/reviews.svg" width="24" alt="Reviews icon"><span>Reviews</span>
+                            </li>
+                        </a>
+                    </ul>
+                </nav>
+            </main>
+            <footer class="sidebar-footer">
+                <nav class="sidebar-nav">
+                    <ul>
+                        <a href="/">
+                            <li>
+                                <img src="/static/images/icons/log-out.svg" width="24" alt="Log Out icon"><span>Log out</span>
+                            </li>
+                        </a>
+                    </ul>
+                </nav>
+            </footer>
         </div>
         <div class="main-wrapper">
             {% block content %}

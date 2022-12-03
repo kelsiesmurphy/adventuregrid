@@ -7,6 +7,10 @@ experiences_blueprint = Blueprint("experiences", __name__)
 
 # INDEX
 # GET '/experiences'
+@experiences_blueprint.route('/experiences')
+def experiences_home():
+    experiences = experience_repository.select_all()
+    return render_template('experiences/index.html', experiences=experiences)
 
 
 # NEW EXPERIENCE

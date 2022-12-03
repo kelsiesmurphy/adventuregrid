@@ -5,8 +5,8 @@ from models.experience import Experience
 
 # SAVE (Create in CRUD)
 def save(user):
-    sql = "INSERT INTO users (name, email, username) VALUES (%s, %s, %s) RETURNING *"
-    values = [user.name, user.email, user.username]
+    sql = "INSERT INTO users (name, email, username, image) VALUES (%s, %s, %s, %s) RETURNING *"
+    values = [user.name, user.email, user.username, user.image]
     result = run_sql(sql, values)[0]
     result_id = result['id']
     user.id = result_id
@@ -21,7 +21,7 @@ def select_by_id(id):
     result = run_sql(sql, values)[0]
 
     if result is not None:
-        selected_user = User(result["name"], result["email"], result["username"])
+        selected_user = User(result["name"], result["email"], result["username"], result["image"])
     return selected_user
 
 
@@ -31,15 +31,15 @@ def select_all():
     sql = "SELECT * FROM users"
     results = run_sql(sql)
     for row in results:
-        new_user = User(row["name"], row["email"], row["username"], row["id"])
+        new_user = User(row["name"], row["email"], row["username"], row["image"], row["id"])
         selected_users.append(new_user)
     return selected_users
 
 
 # UPDATE (Update in CRUD)
 def update(user):    
-    sql = "UPDATE users SET (title, description, location, image, price, is_featured) = (%s, %s, %s, %s, %s, %s) WHERE id = %s"
-    values = [user.name, user.email, user.username, user.id]
+    sql = "UPDATE users SET (name, email, username, image) = (%s, %s, %s, %s) WHERE id = %s"
+    values = [user.name, user.email, user.username, user.image, user.id]
     run_sql(sql, values)
 
 
