@@ -22,6 +22,19 @@ def experience_new():
 
 # CREATE EXPERIENCE
 # POST '/experiences'
+@experiences_blueprint.route('/experiences', methods=['POST'])
+def experience_create():
+    # is_featured = False
+    title = request.form['title']
+    description = request.form['description']
+    location = request.form['location']
+    image = request.form['image']
+    price = request.form['price']
+    is_featured = 'is_featured' in request.form
+
+    new_experience = Experience(title, description, location, image, price, is_featured)
+    experience_repository.save(new_experience)
+    return redirect('/experiences')
 
 
 # SHOW EXPERIENCE
