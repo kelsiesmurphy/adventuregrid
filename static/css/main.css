@@ -11,6 +11,7 @@
     min-width: 280px;
     height: 200px;
     border-radius: 8px;
+    transition: background-color 0.2s ease-out;
 }
 
 .user-card>img {
@@ -32,8 +33,82 @@
     font-size: 14px;
 }
 
+.user-card:hover {
+    background-color: #EAECF0;
+}
+
 .card-grid {
     display: grid;
     gap: 32px;
     grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+}
+
+
+.experience-grid {
+    display: grid;
+    gap: 32px;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+}
+
+.experience-card {
+    max-width: 384px;
+    min-width: 280px;
+    height: 480px;
+    position: relative;
+}
+
+.experience-card>img {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.experience-card-blur {
+    border-top: 1px solid rgba(255, 255, 255, 0.5);
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    color: white;
+    background: rgba(255, 255, 255, 0.3);
+    backdrop-filter: blur(12px);
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 20;
+
+    overflow:hidden;
+    transition: height 0.5s ease-in-out;
+    height: auto;
+    height: 136px;
+}
+
+.experience-card-blur:hover{
+    height: 200px;
+}
+
+
+
+.experience-card-blur>h3 {
+    font-size: 22px;
+    font-weight: 600;
+}
+
+.experience-card-blur>h4 {
+    font-size: 16px;
+    font-weight: 600;
+    margin-top: 16px;
+}
+
+.hover-show {
+    display: none;
+}
+
+.experience-card-blur:hover .hover-show{
+    display: block;
+}
+
+.spacer {
+    height: 64px;
 }

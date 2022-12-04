@@ -20,28 +20,23 @@
                 <img src="/static/images/adventuregrid_logo.svg" width="50" alt="AdventureGrid Logo">
             </header>
             <main>
+            <!-- Followed this documentation for active menu items: https://jinja.palletsprojects.com/en/3.0.x/tricks/#highlighting-active-menu-items -->
+            {% set navigation_bar = [
+                ('/', 'home', 'Home'),
+                ('/experiences', 'experiences', 'Experiences'),
+                ('/users', 'users', 'Users'),
+                ('/reviews', 'reviews', 'Reviews')
+            ] -%}
+            {% set active_page = active_page|default('home') -%}
                 <nav class="sidebar-nav">
                     <ul>
-                        <a href="/">
-                            <li>
-                                <img src="/static/images/icons/home.svg" width="24" alt="Home icon"><span>Home</span>
-                            </li>
-                        </a>
-                        <a href="/users">
-                            <li>
-                                <img src="/static/images/icons/users.svg" width="24" alt="Users icon"><span>Users</span>
-                            </li>
-                        </a>
-                        <a href="/experiences">
-                            <li>
-                                <img src="/static/images/icons/experiences.svg" width="24" alt="Experiences icon"><span>Experiences</span>
-                            </li>
-                        </a>
-                        <a href="/reviews">
-                            <li>
-                                <img src="/static/images/icons/reviews.svg" width="24" alt="Reviews icon"><span>Reviews</span>
-                            </li>
-                        </a>
+                        {% for href, id, caption in navigation_bar %}
+                            <a href="{{ href|e }}">
+                                <li {% if id == active_page %} class="active"{% endif %}>
+                                    <img src="/static/images/icons/{{ id|e }}.svg" width="24" alt="{{id}} icon">{{ caption|e }}
+                                </li>
+                            </a>
+                        {% endfor %}
                     </ul>
                 </nav>
             </main>

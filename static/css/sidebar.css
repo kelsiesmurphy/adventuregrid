@@ -38,6 +38,12 @@
     background-color: #F9FAFB;
 }
 
+.active {
+    background-color: #F9FAFB;
+    color: #101828;
+    border-radius: 6px;
+}
+
 .sidebar-nav>ul>a>li {
     display: flex;
     gap: 12px;

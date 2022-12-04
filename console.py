@@ -37,10 +37,10 @@ experience_repository.save(experience3)
 experience4 = Experience("Glencoe Valley", "Carved out centuries ago by icy glaciers and volcanic explosions, Glencoe is a beautiful place to explore.", "Glencoe, Scotland", "/static/images/experiences/glencoe.jpg", 5, False)
 experience_repository.save(experience4)
 
-experience5 = Experience("Hidden Glasgow", "From the Glasgow Necropolis to the life of the Glasgow architect Charles Rennie Mackintosh, there's plenty to do in Glasgow.", "Glasgow, Scotland", "/static/images/experiences/glasgow.jpg", 0, False)
+experience5 = Experience("Hidden Glasgow", "From the Glasgow Necropolis to the life of the Glasgow architect Charles Rennie Mackintosh, there's plenty to do.", "Glasgow, Scotland", "/static/images/experiences/glasgow.jpg", 0, False)
 experience_repository.save(experience5)
 
-experience6 = Experience("Skye's Secret", "Skye is a truly magical place to visit and home to some of Scotland’s most inspiring landscapes. A land of mystery, intrigue and natural beauty, Skye is a fantastic place to spend some time in Scotland.", "Skye, Scotland", "/static/images/experiences/skye.jpg", 5, False)
+experience6 = Experience("Skye's Secret", "Skye is a truly magical place to visit and home to some of Scotland’s most inspiring landscapes.", "Skye, Scotland", "/static/images/experiences/skye.jpg", 5, False)
 experience_repository.save(experience6)
 
 experience_repository.select_all()
