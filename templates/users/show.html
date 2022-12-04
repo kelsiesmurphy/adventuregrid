@@ -3,14 +3,20 @@
 
 {% block content %}
 <header class="section-header">
-    <h2>{{user.id}}</h2>
+    <h2>{{user.name}}</h2>
 </header>
     <section class="card-grid">
-            <div class="user-card">
-                <img src="{{user.image}}" alt="">
-                <h3>{{user.name}}</h3>
-                <hr>
-                <p>2 Experiences</p>
+        <div class="individual-section">
+            <img id="profile-image" src="{{user.image}}" alt="">
+            <h3>{{user.name}}</h3>
+            <hr>
+            <p>2 Experiences</p>
+            <div class="buttons-container">
+                <a href="/users/{{user.id}}/edit" class="header-button-link primary-button">Edit</a>
+                <form action="/users/{{user.id}}/delete" method="post">
+                    <button class="header-button-link delete-button">Delete</a>
+                </form>
             </div>
+        </div>  
     </section>
 {% endblock content %}

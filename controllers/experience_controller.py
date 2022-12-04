@@ -24,7 +24,6 @@ def experience_new():
 # POST '/experiences'
 @experiences_blueprint.route('/experiences', methods=['POST'])
 def experience_create():
-    # is_featured = False
     title = request.form['title']
     description = request.form['description']
     location = request.form['location']
@@ -39,7 +38,7 @@ def experience_create():
 
 # SHOW EXPERIENCE
 # GET '/experiences/<id>'
-@experiences_blueprint.route('/experiences/<id>')
+@experiences_blueprint.route('/experiences/<int:id>')
 def experience_show(id):
     experience = experience_repository.select_by_id(id)
     return render_template('experiences/show.html', experience = experience)
@@ -47,11 +46,31 @@ def experience_show(id):
 
 # EDIT EXPERIENCE
 # GET '/experiences/<id>/edit'
+@experiences_blueprint.route('/experiences/<int:id>/edit')
+def experience_edit(id):
+    experience = experience_repository.select_by_id(id)
+    return render_template('experiences/edit.html', experience = experience)
 
 
 # UPDATE EXPERIENCE
 # POST '/experiences/<id>' (would normally be PUT)
+@experiences_blueprint.route('/experiences/<int:id>', methods=['POST'])
+def experience_update(id):
+    title = request.form['title']
+    description = request.form['description']
+    location = request.form['location']
+    image = request.form['image']
+    price = request.form['price']
+    is_featured = 'is_featured' in request.form
+
+    updated_experience = Experience(title, description, location, image, price, is_featured, id)
+    experience_repository.update(updated_experience)
+    return redirect(f'/experiences/{updated_experience.id}')
 
 
 # DELETE EXPERIENCE
 # DELETE '/experiences/<id>/delete'
+@experiences_blueprint.route('/experiences/<int:id>/delete', methods=["POST"])
+def experience_delete(id):
+    experience_repository.delete_by_id(id)
+    return redirect('/experiences')

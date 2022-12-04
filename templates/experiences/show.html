@@ -5,15 +5,18 @@
 <header class="section-header">
     <h2>{{experience.title}}</h2>
 </header>
-    <section class="experience-grid">
-        <div class="experience-card" style="background-image: linear-gradient(0deg, rgba(104, 104, 104, 0.2), rgba(104, 104, 104, 0.2)),url('{{experience.image}}'); background-size: cover;">
-            <div class="experience-card-blur">
-                <h3>{{experience.title}}</h3>
-                <div class="hover-show">
-                    <p style="color: white; font-size:14px;">{{experience.description}}</p>
-                </div>
-                <h4>{{experience.location}}</h4>
+    <section class="one-experience">
+        <div class="individual-section">
+            <p>{{experience.description}}</p>
+            <h4>{{experience.location}}</h4>
+            <h3>Price: £{{experience.price}}</h3>
+            <div class="buttons-container">
+                <a href="/experiences/{{experience.id}}/edit" class="header-button-link primary-button">Edit</a>
+                <form action="/experiences/{{experience.id}}/delete" method="post">
+                    <button class="header-button-link delete-button">Delete</a>
+                </form>
             </div>
         </div>
+        <img id="experience-landscape" src="{{experience.image}}" alt="">
     </section>
 {% endblock content %}

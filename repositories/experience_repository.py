@@ -20,7 +20,7 @@ def select_by_id(id):
     result = run_sql(sql, values)[0]
 
     if result is not None:
-        selected_experience = Experience(result["title"], result["description"], result["location"], result["image"], result["price"], result["is_featured"])
+        selected_experience = Experience(result["title"], result["description"], result["location"], result["image"], result["price"], result["is_featured"], result["id"])
     return selected_experience
 
 

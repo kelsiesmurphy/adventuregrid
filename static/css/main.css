@@ -148,6 +148,38 @@
     background-color: #183430;
 }
 
+.delete-button {
+    background-color: #fff;
+    border: 1px solid #FDA29B;
+    color: #B42318;
+}
+
+.delete-button:hover {
+    background-color: #FEF3F2;
+}
+
 section>a {
     text-decoration: none;
+}
+
+.individual-section {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+#profile-image {
+    width: 200px;
+    height: 200px;
+    border-radius: 100%;
+}
+
+#experience-landscape {
+    border-radius: 8px;
+    max-width: 400px;
+}
+
+.one-experience {
+    display: flex;
+    gap: 32px;
 }

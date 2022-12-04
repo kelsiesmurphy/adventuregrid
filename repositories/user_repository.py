@@ -21,7 +21,7 @@ def select_by_id(id):
     result = run_sql(sql, values)[0]
 
     if result is not None:
-        selected_user = User(result["name"], result["email"], result["username"], result["image"])
+        selected_user = User(result["name"], result["email"], result["username"], result["image"], result["id"])
     return selected_user
 
 

@@ -12,9 +12,13 @@ app.register_blueprint(users_blueprint)
 
 @app.route('/')
 def index():
+    return render_template('index.html')
+
+@app.route('/dashboard')
+def home():
     experiences = experience_repository.select_all()
     users = user_repository.select_all()
-    return render_template('index.html', experiences=experiences, users=users)
+    return render_template('dashboard.html', experiences=experiences, users=users)
 
 if __name__ == '__main__':
     app.run(debug=True)
