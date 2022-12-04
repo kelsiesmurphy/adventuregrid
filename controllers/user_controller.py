@@ -15,6 +15,9 @@ def users_home():
 
 # NEW USER
 # GET '/users/new'
+@users_blueprint.route('/users/new')
+def users_new():
+    return render_template('users/create.html')
 
 
 # CREATE USER
@@ -23,6 +26,10 @@ def users_home():
 
 # SHOW USER
 # GET '/users/<id>'
+@users_blueprint.route('/users/<int:id>')
+def user_show(id):
+    user = user_repository.select_by_id(id)
+    return render_template('users/show.html', user=user)
 
 
 # EDIT USER

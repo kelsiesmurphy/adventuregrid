@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+{% set active_page = "users" %}
+
+{% block content %}
+<header class="section-header">
+    <h2>{{user.id}}</h2>
+</header>
+    <section class="card-grid">
+            <div class="user-card">
+                <img src="{{user.image}}" alt="">
+                <h3>{{user.name}}</h3>
+                <hr>
+                <p>2 Experiences</p>
+            </div>
+    </section>
+{% endblock content %}

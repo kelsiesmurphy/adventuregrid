@@ -15,6 +15,9 @@ def experiences_home():
 
 # NEW EXPERIENCE
 # GET '/experiences/new'
+@experiences_blueprint.route('/experiences/new')
+def experience_new():
+    return render_template('experiences/create.html')
 
 
 # CREATE EXPERIENCE
@@ -23,6 +26,10 @@ def experiences_home():
 
 # SHOW EXPERIENCE
 # GET '/experiences/<id>'
+@experiences_blueprint.route('/experiences/<id>')
+def experience_show(id):
+    experience = experience_repository.select_by_id(id)
+    return render_template('experiences/show.html', experience = experience)
 
 
 # EDIT EXPERIENCE

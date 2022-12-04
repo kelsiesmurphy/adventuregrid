@@ -2,15 +2,20 @@
 {% set active_page = "users" %}
 
 {% block content %}
+<header class="section-header">
     <h2>All Users</h2>
+    <a href="/users/new" class="header-button-link primary-button">New User</a>
+</header>
     <section class="card-grid">
         {% for user in users %}
-            <div class="user-card">
-                <img src="{{user.image}}" alt="">
-                <h3>{{user.name}}</h3>
-                <hr>
-                <p>2 Experiences</p>
-            </div>
+            <a href="/users/{{user.id}}">
+                <div class="user-card">
+                    <img src="{{user.image}}" alt="">
+                    <h3>{{user.name}}</h3>
+                    <hr>
+                    <p>2 Experiences</p>
+                </div>
+            </a>
         {% endfor %}
     </section>
 {% endblock content %}

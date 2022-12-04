@@ -112,3 +112,42 @@
 .spacer {
     height: 64px;
 }
+
+.section-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 32px;
+}
+
+.header-button-link {
+    background-color: white;
+    border: 1px solid #D0D5DD;
+    border-radius: 8px;
+    padding: 10px 16px;
+    text-decoration: none;
+    color: #344054;
+    font-weight: 600;
+    font-size: 14px;
+    text-align: center;
+    min-width: 90px;
+    transition: background-color 0.2s ease-out;
+}
+
+.header-button-link:hover {
+    background-color: #F9FAFB;
+}
+
+.primary-button {
+    background-color: #214540;
+    border: none;
+    color: white;
+}
+
+.primary-button:hover {
+    background-color: #183430;
+}
+
+section>a {
+    text-decoration: none;
+}
