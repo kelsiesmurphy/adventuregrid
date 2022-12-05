@@ -1,0 +1,49 @@
+.hero {
+    height: 100vh;
+    background-color: green;
+}
+
+.section-padding {
+    padding: 24px 16px;
+    display: flex;
+    justify-content: space-between;
+    margin: auto;
+    max-width: 1270px;
+}
+
+.hero>main {
+    padding: 80px 16px;
+    align-items: center;
+    flex: 1;
+    height: 568px;
+    justify-content: center;
+    gap: 96px;
+}
+
+.hero>main>img {
+    max-height: 568px;
+    border-radius: 0px 64px;;
+}
+
+.hero-text {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    max-width: 560px;
+    min-width: 280px;
+}
+
+.buttons-container {
+    display: flex;
+    gap: 12px;
+    padding: 16px 0;
+}
+
+.main-content {
+    display: flex;
+    flex-direction: column;
+}
+
+.top-bottom-padding {
+    padding: 80px 0;
+}

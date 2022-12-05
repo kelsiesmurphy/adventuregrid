@@ -1,1 +1,69 @@
-<h1>hello world</h1>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/index.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet">
+</head>
+<body>
+    <section class="hero">
+        <header class="section-padding">
+            <img src="/static/images/index_images/" alt="AdventureGrid Logo" class="logo">
+            <div class="buttons-container">
+                <a href="/dashboard" class="header-button-link primary-button">Dashboard</a>
+            </div>
+        </header>
+        <main class="section-padding">
+            <div class="hero-text">
+                <h1>Seek Adventure</h1>
+                <p>Uncover your sense of adventure and discover something new, with our directory of unique experiences around Scotland, UK.</p>
+                <div class="buttons-container">
+                    <a href="/dashboard" class="header-button-link">Demo</a>
+                    <a href="/dashboard" class="header-button-link primary-button">Latest Adventures</a>
+                </div>
+            </div>
+            <img src="/static/images/experiences/edinburgh.jpg" alt="Hero Image">
+        </main>
+    </section>
+    <main class="section-padding main-content">
+        <section class="testimonial">
+            
+        </section>
+        <section class="experience-grid experiences top-bottom-padding">
+            {% for experience in experiences %}
+                <a href="/experiences/{{experience.id}}">
+                    <div class="experience-card" style="background-image: linear-gradient(0deg, rgba(104, 104, 104, 0.2), rgba(104, 104, 104, 0.2)),url('{{experience.image}}'); background-size: cover;">
+                        <div class="experience-card-blur">
+                            <h3>{{experience.title}}</h3>
+                            <div class="hover-show">
+                                <p style="color: white; font-size:14px;">{{experience.description}}</p>
+                            </div>
+                            <h4>{{experience.location}}</h4>
+                        </div>
+                    </div>
+                </a>
+            {% endfor %}
+        </section>
+        <section class="card-grid top-bottom-padding">
+            {% for user in users %}
+                <a href="/users/{{user.id}}">
+                    <div class="user-card">
+                        <img src="{{user.image}}" alt="">
+                        <h3>{{user.name}}</h3>
+                    </div>
+                </a>
+            {% endfor %}
+        </section>
+    </main>
+    <footer>
+
+    </footer>
+</body>
+</html>
