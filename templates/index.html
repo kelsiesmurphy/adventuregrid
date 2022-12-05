@@ -33,8 +33,15 @@
         </main>
     </section>
     <main class="section-padding main-content">
-        <section class="testimonial">
-            
+        <section>
+                    <div class="index-review-section top-bottom-padding">
+                        <h3>"{{review.review}}"</h3>
+                        <div>
+                            <img src="{{review.user.image}}" alt="reviewer profile image">
+                            <p>{{review.user.name}}</p>
+                            <p><i>{{review.experience.title}}</i></p>
+                        </div>
+                    </div>
         </section>
         <section class="experience-grid experiences top-bottom-padding">
             {% for experience in experiences %}

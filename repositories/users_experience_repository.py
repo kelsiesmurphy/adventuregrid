@@ -29,6 +29,20 @@ def select_all():
     return selected_users_experiences
 
 
+# SELECT BY ID (Read in CRUD)
+def select_by_id(id):
+    selected_users_experience = None
+    sql = "SELECT * FROM users_experiences WHERE id=%s"
+    values = [id]
+    result = run_sql(sql, values)[0]
+
+    if result is not None:
+        user = user_repository.select_by_id("user_id")
+        experience = experience_repository.select_by_id("experience_id")
+        selected_users_experience = Users_Experiences(user, experience, result["review"], result["id"])
+    return selected_users_experience
+
+
 # DELETE ALL
 def delete_all():
     sql = "DELETE FROM users_experiences"
