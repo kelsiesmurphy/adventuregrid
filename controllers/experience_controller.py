@@ -41,7 +41,8 @@ def experience_create():
 @experiences_blueprint.route('/experiences/<int:id>')
 def experience_show(id):
     experience = experience_repository.select_by_id(id)
-    return render_template('experiences/show.html', experience = experience)
+    users = experience_repository.users(experience)
+    return render_template('experiences/show.html', experience=experience, users=users)
 
 
 # EDIT EXPERIENCE

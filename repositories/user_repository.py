@@ -54,3 +54,15 @@ def delete_by_id(id):
 def delete_all():
     sql = "DELETE FROM users"
     run_sql(sql)
+
+
+# EXPERIENCES RELATED TO USER
+def experiences(user):
+    selected_experiences =[]
+    sql = "SELECT experiences.* FROM experiences INNER JOIN users_experiences ON users_experiences.experience_id=experiences.id WHERE user_id=%s"
+    values = [user.id]
+    results = run_sql(sql, values)
+    for row in results:
+        new_experience = Experience(row["title"], row["description"], row["location"], row["image"], row["price"], row["is_featured"], row["id"])
+        selected_experiences.append(new_experience)
+    return selected_experiences

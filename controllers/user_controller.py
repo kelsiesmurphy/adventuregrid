@@ -39,7 +39,8 @@ def user_create():
 @users_blueprint.route('/users/<int:id>')
 def user_show(id):
     user = user_repository.select_by_id(id)
-    return render_template('users/show.html', user=user)
+    experiences = user_repository.experiences(user)
+    return render_template('users/show.html', user=user, experiences=experiences)
 
 
 # EDIT USER

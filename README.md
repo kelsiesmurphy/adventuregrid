@@ -43,8 +43,7 @@ Shopify, Itison, Groupon, etc.
 #### Possible Extensions
 
 * Add reviews of experiences from the members, which can be viewed in the admin panel, but should not be allowed to edit or delete.
-* Filter the member list by experience.
-* Mark manufacturers as active/deactivated. Deactivated manufacturers will not appear when creating new products.
+* Within a user, view the list of experiences, and vice versa.
 
 ### Advanced Extension
 * Create a landing page for the AdventureGrid site, pulling a grid of experiences, a list of users showing how many experiences they have been on, and displaying the featured experience, and a review as well.

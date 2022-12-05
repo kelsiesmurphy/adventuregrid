@@ -1,5 +1,6 @@
 from db.run_sql import run_sql
 from models.experience import Experience
+from models.user import User
 
 
 # SAVE (Create in CRUD)
@@ -53,3 +54,14 @@ def delete_by_id(id):
 def delete_all():
     sql = "DELETE FROM experiences"
     run_sql(sql)
+
+# USERS RELATED TO EXPERIENCE
+def users(experience):
+    selected_users =[]
+    sql = "SELECT users.* FROM users INNER JOIN users_experiences ON users_experiences.user_id=users.id WHERE experience_id=%s"
+    values = [experience.id]
+    results = run_sql(sql, values)
+    for row in results:
+        new_user = User(row["name"], row["email"], row["username"], row["image"], row["id"])
+        selected_users.append(new_user)
+    return selected_users

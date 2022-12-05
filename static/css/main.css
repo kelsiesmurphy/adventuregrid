@@ -183,3 +183,60 @@ section>a {
     display: flex;
     gap: 32px;
 }
+
+.experiences-list {
+    display: block;
+    background-color: #F2F4F7;
+    min-width: 260px;
+    border-radius: 8px;
+    transition: background-color 0.2s ease-out;
+    list-style: none;
+    padding: 12px;
+    font-weight: 500;
+    color: #344054;
+    text-decoration: none;
+}
+
+.experiences-list>li {
+    display: flex;
+    flex-direction: row;
+    gap: 8px;
+    align-items: center;
+}
+
+.experiences-list>li>img {
+    aspect-ratio: 1/1;
+    width: 80px;
+    border-radius: 4px;
+}
+
+.experiences-list:hover {
+    background-color: #EAECF0;
+}
+
+.reviews {
+    display: flex;
+    flex-direction: column;
+}
+
+.review-section {
+    padding: 16px 0;
+    display: flex;
+    gap: 16px;
+    align-items: center;
+}
+
+.review-section.div {
+    display: flex;
+    flex-direction: column;
+}
+
+.review-section>img {
+    aspect-ratio: 1/1;
+    width: 70px;
+    border-radius: 100%;
+}
+
+.review-section>div>h3 {
+    margin-bottom: 8px;
+}

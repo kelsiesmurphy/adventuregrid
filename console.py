@@ -44,3 +44,16 @@ experience6 = Experience("Skye's Secret", "Skye is a truly magical place to visi
 experience_repository.save(experience6)
 
 experience_repository.select_all()
+
+
+review1 = Users_Experiences(user1, experience1, "Aye it was good like")
+users_experience_repository.save(review1)
+
+review2 = Users_Experiences(user2, experience2, "Could be better eh")
+users_experience_repository.save(review2)
+
+review3 = Users_Experiences(user3, experience3, "I like it")
+users_experience_repository.save(review3)
+
+users_experience_repository.select_all()
+
