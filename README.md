@@ -122,4 +122,6 @@ Project Link: [https://github.com/kelsiesmurphy/CC_Project_AdventureGrid](https:
 
 Support, guidance and instructors at [CodeClan](https://codeclan.com/)
 
-All images sourced from [Pexels.com](https://www.pexels.com/)
+All images from [Pexels.com](https://www.pexels.com/)
+
+All icons from [UntitledIcons](https://www.untitledui.com/icons)
