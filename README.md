@@ -49,13 +49,13 @@ Shopify, Itison, Groupon, etc.
 * Create a landing page for the AdventureGrid site, pulling a grid of experiences, a list of users showing how many experiences they have been on, and displaying the featured experience, and a review as well.
 
 
-# Design
+## Design
 I designed the Figma file for AdventureGrid in 2021 whilst practicing UX design in Figma for the Google UX Design certification. You can view the landing page here:
 * Design File - [Figma](https://www.figma.com/file/6y3NfwIqNHi1d9CFf0avwn/AdventureGrid-Design-File?node-id=0%3A1&t=LkN4g6GFA7sTKZwt-1)
 
 
 <!-- BUILT WITH -->
-### Built With
+## Built With
 
 * HTML
 * CSS
