@@ -18,4 +18,4 @@ class TestUser(unittest.TestCase):
         self.assertEqual("John Jones", self.user1.name)
 
     def test_user_has_email(self):
-        self.assertEqual("jaidashota@email.com", self.user1.email)
+        self.assertEqual("jaida@email.com", self.user2.email)
