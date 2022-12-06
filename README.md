@@ -53,6 +53,8 @@ Shopify, Itison, Groupon, etc.
 I designed the Figma file for AdventureGrid in 2021 whilst practicing UX design in Figma for the Google UX Design certification. You can view the landing page here:
 * Design File - [Figma](https://www.figma.com/file/6y3NfwIqNHi1d9CFf0avwn/AdventureGrid-Design-File?node-id=0%3A1&t=LkN4g6GFA7sTKZwt-1)
 
+This project was a continuation of this project, building out the admin dashboard for AdventureGrid, which I built and designed from scratch, using inspiration from the design file above. As an extension, I also built out the landing page shown.
+
 
 <!-- BUILT WITH -->
 ## Built With
