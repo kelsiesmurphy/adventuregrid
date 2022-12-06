@@ -46,10 +46,10 @@ experience_repository.save(experience6)
 experience_repository.select_all()
 
 
-review1 = Users_Experiences(user1, experience1, "Aye it was good like")
+review1 = Users_Experiences(user1, experience1, "I've lived in Scotland for ten years and I feel like i’m rediscovering it all over again!")
 users_experience_repository.save(review1)
 
-review2 = Users_Experiences(user2, experience2, "Could be better eh")
+review2 = Users_Experiences(user2, experience2, "I live in Edinburgh and AdventureGrid has shown me parts of the city i've never seen!")
 users_experience_repository.save(review2)
 
 review3 = Users_Experiences(user3, experience3, "I like it")

@@ -30,6 +30,12 @@ input:not([type='checkbox']), textarea {
     padding: 4px 12px;
     font-size: 16px;
     font-weight: 400;
+    transition: border 0.2s ease-out;
+}
+
+input:focus, textarea:focus {
+    outline: none;
+    border: 2px solid #344054;
 }
 
 textarea {

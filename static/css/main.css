@@ -9,7 +9,7 @@
     padding: 24px;
     background-color: #F2F4F7;
     min-width: 280px;
-    height: 200px;
+    height: 180px;
     border-radius: 8px;
     transition: background-color 0.2s ease-out;
 }
@@ -48,6 +48,7 @@
     display: grid;
     gap: 32px;
     grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    justify-content: center;
 }
 
 .experience-card {
@@ -55,6 +56,7 @@
     min-width: 280px;
     height: 480px;
     position: relative;
+    margin: auto;
 }
 
 .experience-card>img {

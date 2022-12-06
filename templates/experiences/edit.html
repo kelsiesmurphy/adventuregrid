@@ -1,7 +1,7 @@
 {% extends 'base.html' %}
 
 {% block content %}
-    <h2>Edit {{experience.title}} page</h2>
+    <h2>Edit {{experience.title}}</h2>
     <form class="create-form" action="/experiences/{{experience.id}}" method='post'>
         <div class="title input-wrapper">
             <label for="title">Title</label>
