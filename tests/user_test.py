@@ -10,8 +10,8 @@ import repositories.users_experience_repository as users_experience_repository
 
 class TestUser(unittest.TestCase):
     def setUp(self):
-        self.user1  = User("John Jones", "johnjones987", "johnjones@email.com", "/static/images/users/john.png")
-        self.user2  = User("Jaida Shōta", "jaidashota453", "jaidashota@email.com", "/static/images/users/jaida.png")
+        self.user1  = User("John Jones", "johnjones@email.com", "johnjones987", "/static/images/users/john.png")
+        self.user2  = User("Jaida Shōta", "jaida@email.com", "jaidashota453", "/static/images/users/jaida.png")
 
 
     def test_user_has_name(self):

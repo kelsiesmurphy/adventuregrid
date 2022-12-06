@@ -3,6 +3,15 @@ from models.user import User
 from models.experience import Experience
 
 
+# SAVE PSEUDOCODE
+# Get a user
+# Create a variable containing the SQL command to insert data into the users table
+# Pass in the values separately to this SQL command
+# run the run_sql file passing in the sql variable and the values, and get the first item from the list
+# Get id from the returned dictionary result
+# attach the id created in the SQL command to the user
+# return the user
+
 # SAVE (Create in CRUD)
 def save(user):
     sql = "INSERT INTO users (name, email, username, image) VALUES (%s, %s, %s, %s) RETURNING *"
