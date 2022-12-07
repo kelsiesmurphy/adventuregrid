@@ -14,10 +14,16 @@ app.register_blueprint(users_blueprint)
 @app.route('/')
 def index():
     experiences = experience_repository.select_all()
+
+    featured_experiences = []
+    for experience in experiences:
+        if experience.is_featured == True:
+            featured_experiences.append(experience)
+    featured_experience = featured_experiences[random.randint(0, len(featured_experiences)-1)]
     users = user_repository.select_all()
     reviews = users_experience_repository.select_all()
     review = reviews[random.randint(0, len(reviews)-1)]
-    return render_template('index.html', experiences=experiences, users=users, review=review)
+    return render_template('index.html', experiences=experiences, users=users, review=review, featured_experience=featured_experience)
 
 @app.route('/dashboard')
 def home():
