@@ -79,11 +79,11 @@
     left: 0;
     right: 0;
     z-index: 20;
-
     overflow:hidden;
-    transition: height 0.5s ease-in-out;
     height: auto;
+    /* This is the hover state setup on the experience cards */
     height: 136px;
+    transition: height 0.5s ease-in-out;
 }
 
 .experience-card-blur:hover{
