@@ -8,6 +8,7 @@
       <a href="#adventuregrid-admin-panel">Project Brief</a>
       <ul>
         <li><a href="#built-with">Built With</a></li>
+        <li><a href="#reflections">Reflections</a></li>
       </ul>
     </li>
     <li>
@@ -67,6 +68,10 @@ This project was a continuation of this project, building out the admin dashboar
 * Flask
 * Postgresql
 
+
+<!-- REFLECTIONS -->
+## Reflections
+I really enjoyed the styling of this project, and thinking through the user experience carefully. One of the key difficulties I encountered was actually the hosting of the demonstration site, as I had never hosted a Flask site before. I will return to the project in the future to add the e-commerce functionality. The code I am featuring here is the dynamic admin navigation, and how it reflects the current page by slightly adjusting its styling based on the page you are on, using Flask.
 
 
 <!-- GETTING STARTED -->
