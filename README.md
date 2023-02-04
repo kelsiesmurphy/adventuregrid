@@ -28,6 +28,8 @@
 ### AdventureGrid Admin Panel
 
 An app built in Flask which allows the admin of the website AdventureGrid to manage their users and experiences. AdventureGrid is an ecommerce site that shares/sells local experience packages in a B2C format. As an extension, also build the landing page for AdventureGrid which displays the data.
+For a demo version, it is hosted using PythonAnywhere at:
+* [AdventureGrid](https://kelsiesmurphy.pythonanywhere.com/)
 
 <!-- <img align="center" src="https://user-images.githubusercontent.com/77012426/211338415-c35cf698-44bc-4f70-be04-58e16ccf6b14.jpg" alt="AdventureGrid dashboard home"> -->
 
