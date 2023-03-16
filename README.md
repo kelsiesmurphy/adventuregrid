@@ -8,6 +8,7 @@
       <a href="#adventuregrid-admin-panel">Project Brief</a>
       <ul>
         <li><a href="#built-with">Built With</a></li>
+        <li><a href="#reflections">Reflections</a></li>
       </ul>
     </li>
     <li>
@@ -27,8 +28,12 @@
 ### AdventureGrid Admin Panel
 
 An app built in Flask which allows the admin of the website AdventureGrid to manage their users and experiences. AdventureGrid is an ecommerce site that shares/sells local experience packages in a B2C format. As an extension, also build the landing page for AdventureGrid which displays the data.
+For a demo version, it is hosted using PythonAnywhere at:
+* [AdventureGrid](https://kelsiesmurphy.pythonanywhere.com/)
 
-<img align="center" src="https://user-images.githubusercontent.com/77012426/211338415-c35cf698-44bc-4f70-be04-58e16ccf6b14.jpg" alt="AdventureGrid dashboard home">
+<!-- <img align="center" src="https://user-images.githubusercontent.com/77012426/211338415-c35cf698-44bc-4f70-be04-58e16ccf6b14.jpg" alt="AdventureGrid dashboard home"> -->
+
+https://user-images.githubusercontent.com/77012426/216737929-b0c5f3da-b750-4371-94df-fd25c5212ec8.mp4
 
 #### MVP
 
@@ -67,6 +72,10 @@ This project was a continuation of this project, building out the admin dashboar
 * Flask
 * Postgresql
 
+
+<!-- REFLECTIONS -->
+## Reflections
+I really enjoyed the styling of this project, and thinking through the user experience carefully. One of the key difficulties I encountered was actually the hosting of the demonstration site, as I had never hosted a Flask site before. I will return to the project in the future to add the e-commerce functionality.
 
 
 <!-- GETTING STARTED -->
